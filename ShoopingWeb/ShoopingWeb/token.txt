@@ -1,0 +1,4 @@
+﻿token:
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJhbnRAMTYzLmNvbSIsIm5iZiI6MTczMjI4MjAzOCwiZXhwIjoxNzMyMzY4NDM4LCJpYXQiOjE3MzIyODIwMzh9.qtyDMqdLe9e6tIkWihCw4d2npzGcsO7nVXTsdRMwqv4
