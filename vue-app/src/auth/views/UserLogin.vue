@@ -28,7 +28,7 @@ const loginForm = ref(null);
 const state = reactive({
   ruleFrom: {
     email: "22",
-    password: "333"
+    password: "22"
   }
 });
 

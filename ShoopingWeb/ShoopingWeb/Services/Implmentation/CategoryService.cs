@@ -30,7 +30,11 @@ namespace ShoopingWeb.Services.Implmentation
                 throw new ArgumentException("Category description is required.", nameof(description));
             }
 
-            var category = new Category { Name = name, Description = description };
+            var category = new Category 
+            { 
+                Name = name,
+                Description = description
+            };
             await _context.Categories.AddAsync(category);
             await _context.SaveChangesAsync();
         }

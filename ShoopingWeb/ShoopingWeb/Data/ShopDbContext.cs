@@ -11,6 +11,32 @@ namespace ShoopingWeb.Data
 
         }
 
+
+
+
+        //----------------------------------------------------
+        /// <summary>
+        ///档案
+        /// </summary>
+        public DbSet<storehouse_Table> storehouse_Table { get; set; }
+        public DbSet<supplier_Table> supplier_Table { get; set; }
+        public DbSet<Customer> Customer_Table { get; set; }
+        public DbSet<product_Table> product_Table { get; set; }
+
+
+        //----------------------------------------------------
+
+
+
+        /// <summary>
+        /// 采购
+        /// </summary>
+        public DbSet<purchase_orders> purchase_orders { get; set; }
+
+
+
+
+
         public DbSet<Category> Categoryise { get; set; }
         public DbSet<User> user_Table { get; set; }
 
@@ -29,9 +55,11 @@ namespace ShoopingWeb.Data
  
 
         // 定义每个实体的 DbSet
-        public DbSet<Customer> Customer_Table { get; set; }
+      
         public DbSet<Category> Categories { get; set; }
         public DbSet<CategoryData> CategoryData { get; set; }
+        public DbSet<View_CategoryData> View_CategoryData_WithCategoryName { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -77,6 +105,11 @@ namespace ShoopingWeb.Data
                 .HasOne(cd => cd.Category)
                 .WithMany()
                 .HasForeignKey(cd => cd.CategoryId);
+
+
+
+
+
         }
 
       

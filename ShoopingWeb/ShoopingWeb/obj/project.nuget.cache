@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q56XLXGcvTU=",
+  "dgSpecHash": "/c6mY4FnFXg=",
   "success": true,
-  "projectFilePath": "D:\\01桌面快捷键\\学校文件存放\\大三上学期\\01myword\\代码源文件\\erp\\ShoopingWeb\\ShoopingWeb\\ShoopingWeb.csproj",
+  "projectFilePath": "D:\\01桌面快捷键\\学校文件存放\\大三上学期\\01myword\\代码源文件\\erp系统\\ShoopingWeb\\ShoopingWeb\\ShoopingWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

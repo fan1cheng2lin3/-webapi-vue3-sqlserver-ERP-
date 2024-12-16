@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\01桌面快捷键\\学校文件存放\\大三上学期\\01myword\\代码源文件\\erp\\ShoopingWeb\\ShoopingWeb\\ShoopingWeb.csproj": {}
+    "D:\\01桌面快捷键\\学校文件存放\\大三上学期\\01myword\\代码源文件\\erp系统\\ShoopingWeb\\ShoopingWeb\\ShoopingWeb.csproj": {}
   },
   "projects": {
-    "D:\\01桌面快捷键\\学校文件存放\\大三上学期\\01myword\\代码源文件\\erp\\ShoopingWeb\\ShoopingWeb\\ShoopingWeb.csproj": {
+    "D:\\01桌面快捷键\\学校文件存放\\大三上学期\\01myword\\代码源文件\\erp系统\\ShoopingWeb\\ShoopingWeb\\ShoopingWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\01桌面快捷键\\学校文件存放\\大三上学期\\01myword\\代码源文件\\erp\\ShoopingWeb\\ShoopingWeb\\ShoopingWeb.csproj",
+        "projectUniqueName": "D:\\01桌面快捷键\\学校文件存放\\大三上学期\\01myword\\代码源文件\\erp系统\\ShoopingWeb\\ShoopingWeb\\ShoopingWeb.csproj",
         "projectName": "ShoopingWeb",
-        "projectPath": "D:\\01桌面快捷键\\学校文件存放\\大三上学期\\01myword\\代码源文件\\erp\\ShoopingWeb\\ShoopingWeb\\ShoopingWeb.csproj",
+        "projectPath": "D:\\01桌面快捷键\\学校文件存放\\大三上学期\\01myword\\代码源文件\\erp系统\\ShoopingWeb\\ShoopingWeb\\ShoopingWeb.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\01桌面快捷键\\学校文件存放\\大三上学期\\01myword\\代码源文件\\erp\\ShoopingWeb\\ShoopingWeb\\obj\\",
+        "outputPath": "D:\\01桌面快捷键\\学校文件存放\\大三上学期\\01myword\\代码源文件\\erp系统\\ShoopingWeb\\ShoopingWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\vszhujian\\NuGetPackages"

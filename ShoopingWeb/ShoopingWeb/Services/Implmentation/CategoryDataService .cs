@@ -14,9 +14,9 @@ namespace ShoopingWeb.Services.Implmentation
             _context = context;
         }
 
-        public async Task<IEnumerable<CategoryData>> GetDataByCategoryIdAsync(int categoryId)
+        public async Task<IEnumerable<View_CategoryData>> GetDataByCategoryIdAsync(int categoryId)
         {
-            return await _context.CategoryData
+            return await _context.View_CategoryData_WithCategoryName
                 .Where(cd => cd.CategoryId == categoryId)
                 .ToListAsync();
         }
@@ -32,6 +32,9 @@ namespace ShoopingWeb.Services.Implmentation
             await _context.CategoryData.AddAsync(categoryData);
             await _context.SaveChangesAsync();
         }
+
+
+
 
         public async Task UpdateDataAsync(int id, string fieldValue)
         {

@@ -15,6 +15,8 @@ const routes = [
     component: () => import('@/views/LayoutView.vue'),
     redirect: '/home',
     children: [
+
+
       {
         path: '/home',
         name: 'home',
@@ -51,7 +53,36 @@ const routes = [
         component: CategoryDetail,
         props: true, // 启用 props 使得路由参数作为 props 传递给组件
       },
-      
+      {
+        path: '/Product',
+        name: 'Product',
+        component: () => import('../views/ProductView.vue')
+      },
+      {
+        path: '/Customer',
+        name: 'Customer',
+        component: () => import('../views/CustomerView.vue')
+      },
+      {
+        path: '/Storehouse',
+        name: 'Storehouse',
+        component: () => import('../views/StorehouseVie.vue')
+      },
+      {
+        path: '/Supplier',
+        name: 'Supplier',
+        component: () => import('../views/SupplierView.vue')
+      },
+      {
+        path: '/Purchase',
+        name: 'Purchase',
+        component: () => import('../views/PurchaseView.vue')
+      },
+      {
+        path: '/Textll',
+        name: 'Textll',
+        component: () => import('../views/TextllView.vue')
+      },
     ]
   },
 

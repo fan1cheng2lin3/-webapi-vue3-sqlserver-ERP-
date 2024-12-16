@@ -86,7 +86,8 @@ builder.Services.AddScoped<IPermissionService, PermissionService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<ICategoryDataService, CategoryDataService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-
+builder.Services.AddScoped<IFile_Management, File_Management>();
+builder.Services.AddScoped<IPurchaseService, PurchaseService>();
 
 
 var app = builder.Build();

@@ -2,7 +2,7 @@
   <el-container>
     <el-aside width="200px" style="height: 100vh;">
       <el-scrollbar style="background-color:#303133">
-        <div class="mb-2 logo">水果ERP管理系统</div>
+        <div class="mb-2 logo">服装ERP管理系统</div>
         <el-menu 
           :default-openeds="['1', '2']"
           active-text-color="#ffd04b"
@@ -11,31 +11,47 @@
           :router="true"
         >
           <el-sub-menu index="1">
-            <template #title>
+            <!-- <template #title>
               <el-icon><message /></el-icon>档案管理
             </template>
-            <el-menu-item-group>
+            <el-menu-item-group> -->
               <!-- 自定义档案，点击时不跳转 -->
-              <el-menu-item @click="handleCustomCategoryClick">
+              <!-- <el-menu-item @click="handleCustomCategoryClick">
                 <el-icon><HomeFilled /></el-icon>自定义档案
-              </el-menu-item>
+              </el-menu-item> -->
 
               <!-- 动态加载分类信息 -->
-              <el-menu-item
+              <!-- <el-menu-item
                 v-for="(item) in categoryList"
                 :key="item.id"
                 :index="'category-' + item.id"
                 @click="handleCategoryClick(item)"
               >
                 {{ item.name }}
-              </el-menu-item>
+              </el-menu-item> -->
 
               <!-- 其他档案 -->
-              <el-menu-item index="/home">其他档案</el-menu-item>
+              <!-- <el-menu-item index="/home">其他档案</el-menu-item>
+            </el-menu-item-group> -->
+          </el-sub-menu>
+
+
+
+          <el-sub-menu index="2">
+            <template #title>
+              <el-icon><Setting /></el-icon>档案管理
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="/Product"><el-icon><UserFilled /></el-icon>商品档案</el-menu-item>
+              <el-menu-item index="/Supplier"><el-icon><Avatar /></el-icon>供应商档案</el-menu-item>
+              <el-menu-item index="/Storehouse"><el-icon><EditPen /></el-icon>仓库档案</el-menu-item>
+              <el-menu-item index="/Customer"><el-icon><EditPen /></el-icon>用户档案</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
 
-          <el-sub-menu index="2">
+
+
+          <el-sub-menu index="3">
             <template #title>
               <el-icon><Setting /></el-icon>管理功能
             </template>
@@ -45,6 +61,21 @@
               <el-menu-item index="/Permissions"><el-icon><EditPen /></el-icon>权限管理</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>
+
+
+          <el-sub-menu index="4">
+            <template #title>
+              <el-icon><Setting /></el-icon>模块管理
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="/Purchase"><el-icon><UserFilled /></el-icon>采购</el-menu-item>
+              <el-menu-item index="/Roles"><el-icon><Avatar /></el-icon>销售</el-menu-item>
+              <el-menu-item index="/Permissions"><el-icon><EditPen /></el-icon>库存</el-menu-item>
+              <el-menu-item index="/Textll"><el-icon><EditPen /></el-icon>财务</el-menu-item>
+            </el-menu-item-group>
+          </el-sub-menu>
+
+
         </el-menu>
       </el-scrollbar>
     </el-aside>
@@ -79,7 +110,7 @@ import { ref, onMounted } from 'vue';
 import { useStore } from 'vuex';
 import { useRouter } from 'vue-router';
 import axios from 'axios';
-import { HomeFilled, Setting, UserFilled, Avatar, EditPen } from '@element-plus/icons-vue';
+// import { HomeFilled, Setting, UserFilled, Avatar, EditPen } from '@element-plus/icons-vue';
 
 const store = useStore();
 const router = useRouter();
@@ -101,18 +132,18 @@ onMounted(() => {
 });
 
 // 处理点击分类
-const handleCategoryClick = (item) => {
-  console.log('点击了分类:', item);
-  // 跳转到分类详情页
-  router.push({ name: 'categoryDetail', params: { id: item.id } });
-};
+// const handleCategoryClick = (item) => {
+//   console.log('点击了分类:', item);
+//   // 跳转到分类详情页
+//   router.push({ name: 'categoryDetail', params: { id: item.id } });
+// };
 
 // 处理点击“自定义档案”，不做任何路由跳转
-const handleCustomCategoryClick = () => {
-  console.log('点击了自定义档案');
-  // 可以在这里做一些操作，比如展开其他菜单项或显示内容
-  router.push({ name: 'category' });
-};
+// const handleCustomCategoryClick = () => {
+//   console.log('点击了自定义档案');
+//   // 可以在这里做一些操作，比如展开其他菜单项或显示内容
+//   router.push({ name: 'category' });
+// };
 
 // 注销函数
 const Logout = () => {
