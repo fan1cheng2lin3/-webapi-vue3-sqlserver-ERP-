@@ -66,7 +66,7 @@ const routes = [
       {
         path: '/Storehouse',
         name: 'Storehouse',
-        component: () => import('../views/StorehouseVie.vue')
+        component: () => import('../views/StorehouseView.vue')
       },
       {
         path: '/Supplier',
@@ -83,6 +83,12 @@ const routes = [
         name: 'Textll',
         component: () => import('../views/TextllView.vue')
       },
+      {
+        path: '/Warehou',
+        name: 'Warehou',
+        component: () => import('../views/WarehouseView.vue')
+      },
+     
     ]
   },
 

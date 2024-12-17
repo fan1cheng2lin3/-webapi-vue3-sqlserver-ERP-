@@ -15,6 +15,7 @@ builder.Services.AddControllers()
     .AddNewtonsoftJson(options =>
     {
         options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+
     });
 
 
@@ -58,6 +59,9 @@ builder.Services.AddSwaggerGen(c =>
 }
 
 );
+
+
+
 builder.Services.AddDbContext<ShopDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("ShopConn"));

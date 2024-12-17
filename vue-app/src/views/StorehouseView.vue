@@ -2,15 +2,6 @@
 import { reactive, ref, onMounted } from 'vue';
 import { ElMessage } from 'element-plus';
 import axios from 'axios';
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-
-const goToWarehouse = () => {
-  router.push({ name: 'Warehou' });
-};
-
-
 
 // 自动生成订单编号
 const generateOrderId = () => {
@@ -184,13 +175,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <h1>采购单</h1>
    <!-- 提交按钮 -->
    <el-form-item>
       <el-button type="primary" @click="submitForm">提交</el-button>
       <el-button @click="resetForm">重置</el-button>
-      <el-button @click="goToWarehouse">到货</el-button>
-
     </el-form-item>
   <el-form ref="purchaseFormRef" :model="purchaseForm" :rules="rules" label-width="120px">
     <!-- 采购订单信息 -->

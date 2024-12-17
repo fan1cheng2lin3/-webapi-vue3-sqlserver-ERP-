@@ -18,10 +18,10 @@ module.exports = defineConfig({
     },
     client: {
       overlay: {
-        warnings: false,
-        errors: false,
-      },
-    },
+        errors: true,  // 显示错误覆盖层
+        warnings: false,  // 隐藏警告覆盖层
+      }
+    }
   },
   configureWebpack: {
     plugins: [

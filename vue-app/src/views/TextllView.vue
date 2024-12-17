@@ -183,7 +183,6 @@ const tableData = reactive([
 
 // 提交前检查所有数据
 const saveAllChanges = async () => {
-  // 过滤出有效数据（已经存在的和新增的）
 
   // 打印 tableData 以检查请求数据
   console.log("提交的数据: ", tableData);

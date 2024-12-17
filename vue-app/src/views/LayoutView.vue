@@ -70,7 +70,7 @@
             <el-menu-item-group>
               <el-menu-item index="/Purchase"><el-icon><UserFilled /></el-icon>采购</el-menu-item>
               <el-menu-item index="/Roles"><el-icon><Avatar /></el-icon>销售</el-menu-item>
-              <el-menu-item index="/Permissions"><el-icon><EditPen /></el-icon>库存</el-menu-item>
+              <el-menu-item index="/Storehouse"><el-icon><EditPen /></el-icon>库存</el-menu-item>
               <el-menu-item index="/Textll"><el-icon><EditPen /></el-icon>财务</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>

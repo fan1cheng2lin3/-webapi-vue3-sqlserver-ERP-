@@ -11,9 +11,6 @@ namespace ShoopingWeb.Data
 
         }
 
-
-
-
         //----------------------------------------------------
         /// <summary>
         ///档案
@@ -23,7 +20,6 @@ namespace ShoopingWeb.Data
         public DbSet<Customer> Customer_Table { get; set; }
         public DbSet<product_Table> product_Table { get; set; }
 
-
         //----------------------------------------------------
 
 
@@ -32,8 +28,27 @@ namespace ShoopingWeb.Data
         /// 采购
         /// </summary>
         public DbSet<purchase_orders> purchase_orders { get; set; }
+        public DbSet<order_products> order_products { get; set; }
 
 
+
+
+        /// <summary>
+        /// 应收明细表
+        /// </summary>
+        public DbSet<AR_Detail> AR_Detail { get; set; }
+
+        /// <summary>
+        /// 应付明细表
+        /// </summary>
+        public DbSet<AR_Detail> AP_Detail { get; set; }
+
+
+
+
+
+
+        
 
 
 
