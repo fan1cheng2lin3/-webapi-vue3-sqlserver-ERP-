@@ -36,12 +36,12 @@ namespace ShoopingWeb.Data
         /// <summary>
         /// 应收明细表
         /// </summary>
-        public DbSet<AR_Detail> AR_Detail { get; set; }
+        public DbSet<AP_Detail> AP_Detail { get; set; }
 
         /// <summary>
         /// 应付明细表
         /// </summary>
-        public DbSet<AR_Detail> AP_Detail { get; set; }
+        //public DbSet<AP_Detail> AP_Detail { get; set; }
 
 
 

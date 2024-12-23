@@ -69,6 +69,22 @@ namespace ShoopingWeb.Controllers
 
 
 
+        // 查询商品数据
+        [HttpGet("order_products")]
+        public async Task<IActionResult> Getorder_products()
+        {
+            var data = await _context.order_products
+                .ToListAsync();
+            return Ok(data);
+        }
+
+        [HttpGet("purchase_orders")]
+        public async Task<IActionResult> Getpurchase_orders()
+        {
+            var data = await _context.purchase_orders
+                .ToListAsync();
+            return Ok(data);
+        }
 
         // 查询商品数据
         [HttpGet("product")]
@@ -100,7 +116,8 @@ namespace ShoopingWeb.Controllers
         [HttpGet("storehouse")]
         public async Task<IActionResult> GetDataStorehouse_Table()
         {
-            var data = await _service.GetDataByStorehouse_Table();
+            var data = await _context.storehouse_Table
+                .ToListAsync();
             return Ok(data);
         }
 
@@ -119,10 +136,10 @@ namespace ShoopingWeb.Controllers
             foreach (var product in products)
             {
                 // 校验单个产品数据（可以根据需要加上具体校验规则）
-                if (string.IsNullOrWhiteSpace(product.Name) || string.IsNullOrWhiteSpace(product.Product_code))
-                {
-                    return BadRequest($"产品 {product.Name ?? "未知"} 的数据不完整！");
-                }
+                //if (string.IsNullOrWhiteSpace(product.Name) || string.IsNullOrWhiteSpace(product.Product_code))
+                //{
+                //    return BadRequest($"产品 {product.Name ?? "未知"} 的数据不完整！");
+                //}
 
                 await _service.Addproduct(product.Name, product.Product_code, product.Product_type,
                                            product.supplier_name, Convert.ToInt32(product.Unit_price), Convert.ToInt32(product.Count));
@@ -149,14 +166,25 @@ namespace ShoopingWeb.Controllers
             return Ok();
         }
 
-        // 新增分类数据
+
+        // 新增多个分类数据
         [HttpPost("appStorehouse_Table")]
-        public async Task<IActionResult> AddStorehouse_Table([FromBody] storehouse_Table dto)
+        public async Task<IActionResult> AddStorehouse_Table([FromBody] StorehouseTableRequest dto)
         {
-            await _service.AddStorehouse_Table(dto.Name, dto.Product_code, dto.storehouse_address, dto.Product_type, Convert.ToInt32(dto.Unit_price), Convert.ToInt32(dto.Count));
+            // 遍历所有的storehouse数据，逐个插入
+            foreach (var item in dto.Storehouses)
+            {
+                await _service.AddStorehouse_Table(
+                    dto.Name,
+                    item.StorehouseAddress,
+                    item.ProductCode,
+                    item.ProductType,
+                    Convert.ToInt32(item.UnitPrice),
+                    Convert.ToInt32(item.Count)
+                );
+            }
             return Ok();
         }
-
 
 
 

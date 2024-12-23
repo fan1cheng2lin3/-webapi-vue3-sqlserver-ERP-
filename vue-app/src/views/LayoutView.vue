@@ -10,7 +10,7 @@
           text-color="#fff"
           :router="true"
         >
-          <el-sub-menu index="1">
+          <!-- <el-sub-menu index="1"> -->
             <!-- <template #title>
               <el-icon><message /></el-icon>档案管理
             </template>
@@ -33,7 +33,7 @@
               <!-- 其他档案 -->
               <!-- <el-menu-item index="/home">其他档案</el-menu-item>
             </el-menu-item-group> -->
-          </el-sub-menu>
+          <!-- </el-sub-menu> -->
 
 
 
@@ -69,8 +69,8 @@
             </template>
             <el-menu-item-group>
               <el-menu-item index="/Purchase"><el-icon><UserFilled /></el-icon>采购</el-menu-item>
-              <el-menu-item index="/Roles"><el-icon><Avatar /></el-icon>销售</el-menu-item>
-              <el-menu-item index="/Storehouse"><el-icon><EditPen /></el-icon>库存</el-menu-item>
+              <el-menu-item index="/Sale"><el-icon><Avatar /></el-icon>销售</el-menu-item>
+              <!-- <el-menu-item index="/Storehouse"><el-icon><EditPen /></el-icon>库存</el-menu-item> -->
               <el-menu-item index="/Textll"><el-icon><EditPen /></el-icon>财务</el-menu-item>
             </el-menu-item-group>
           </el-sub-menu>

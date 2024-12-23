@@ -2,7 +2,7 @@
 
 namespace ShoopingWeb.Models
 {
-    public class AR_Detail
+    public class AP_Detail
     {
 
 

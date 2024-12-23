@@ -20,8 +20,9 @@ namespace ShoopingWeb.Controllers
         }
 
 
-        [HttpPost("AR_Detail")]
-        public async Task<IActionResult> Addpurchase([FromBody] AR_Detail dto)
+
+        [HttpPost("AP_Detail")]
+        public async Task<IActionResult> Addpurchase([FromBody] AP_Detail dto)
         {
             // 使用当前时间戳生成一个基础数字
             var timestamp = DateTime.UtcNow.ToString("yyyyMMddHHmmssfff"); // 获取到毫秒级别的时间戳
@@ -33,7 +34,7 @@ namespace ShoopingWeb.Controllers
             var invoiceNumber = timestamp.Substring(8, 6) + randomNumber.ToString().Substring(0, 2);
 
             // 创建主订单
-            var mainOrder = new AR_Detail
+            var mainOrder = new AP_Detail
             {
                 receivables = dto.receivables,
                 invoice_number = invoiceNumber,  // 使用生成的随机发票号
@@ -42,10 +43,13 @@ namespace ShoopingWeb.Controllers
                 created_at = timestamp2,
             };
 
-            await _context.AR_Detail.AddAsync(mainOrder);
+            await _context.AP_Detail.AddAsync(mainOrder);
             await _context.SaveChangesAsync();
 
             return Ok();
+
+
+
         }
 
 

@@ -28,10 +28,6 @@
 
 
 
-
-
-
-
   <el-table-column fixed="right" label="操作" width="180">
   
   
@@ -80,7 +76,7 @@
   getList()
   })
   
-  //获取分类的信息
+  //获取商品的信息
   const getList=()=>{
   return axios.get('/File_Management/product').then((res)=>{
     tableData.list = res.data

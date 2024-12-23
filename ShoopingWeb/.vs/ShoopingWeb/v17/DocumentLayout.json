@@ -3,44 +3,64 @@
   "WorkspaceRootPath": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\services\\implmentation\\file_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\services\\implmentation\\file_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\services\\interfaces\\ifile_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\services\\interfaces\\ifile_management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\controllers\\file_managementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\controllers\\file_managementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\models\\product_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\models\\product_table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\data\\shopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\data\\shopdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\models\\ar_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\models\\ar_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\controllers\\financecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\controllers\\financecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\dto\\dtos\\storehousetablerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\dto\\dtos\\storehousetablerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\controllers\\purchasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\controllers\\purchasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\controllers\\permissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\controllers\\permissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\models\\warehouse_log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\models\\warehouse_log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\models\\purchase_orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\models\\purchase_orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\services\\implmentation\\purchaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\services\\implmentation\\purchaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\models\\purchase_orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\models\\purchase_orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\controllers\\financecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\controllers\\financecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\models\\ap_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\models\\ap_detail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\controllers\\permissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\controllers\\permissionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\models\\order_products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,10 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\services\\interfaces\\ipurchaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\services\\interfaces\\ipurchaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|d:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\shoopingweb\\shoopingweb\\controllers\\file_managementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{536077D9-DB7E-42B1-8F15-060EB033DDC0}|ShoopingWeb\\ShoopingWeb.csproj|solutionrelative:shoopingweb\\controllers\\file_managementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 1003,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,85 +98,150 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "product_Table.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\product_Table.cs",
+              "RelativeDocumentMoniker": "ShoopingWeb\\Models\\product_Table.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\product_Table.cs",
+              "RelativeToolTip": "ShoopingWeb\\Models\\product_Table.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T14:49:57.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IFile_Management.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Services\\Interfaces\\IFile_Management.cs",
+              "RelativeDocumentMoniker": "ShoopingWeb\\Services\\Interfaces\\IFile_Management.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Services\\Interfaces\\IFile_Management.cs",
+              "RelativeToolTip": "ShoopingWeb\\Services\\Interfaces\\IFile_Management.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAIwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T13:03:45.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StorehouseTableRequest.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\DTO\\Dtos\\StorehouseTableRequest.cs",
+              "RelativeDocumentMoniker": "ShoopingWeb\\DTO\\Dtos\\StorehouseTableRequest.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\DTO\\Dtos\\StorehouseTableRequest.cs",
+              "RelativeToolTip": "ShoopingWeb\\DTO\\Dtos\\StorehouseTableRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwwAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T13:42:04.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "warehouse_log.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\warehouse_log.cs",
+              "RelativeDocumentMoniker": "ShoopingWeb\\Models\\warehouse_log.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\warehouse_log.cs",
+              "RelativeToolTip": "ShoopingWeb\\Models\\warehouse_log.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T12:31:20.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "purchase_orders.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\purchase_orders.cs",
+              "RelativeDocumentMoniker": "ShoopingWeb\\Models\\purchase_orders.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\purchase_orders.cs",
+              "RelativeToolTip": "ShoopingWeb\\Models\\purchase_orders.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T12:19:09.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "File_Management.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Services\\Implmentation\\File_Management.cs",
+              "RelativeDocumentMoniker": "ShoopingWeb\\Services\\Implmentation\\File_Management.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Services\\Implmentation\\File_Management.cs",
+              "RelativeToolTip": "ShoopingWeb\\Services\\Implmentation\\File_Management.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAIwF0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T11:57:29.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShopDbContext.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Data\\ShopDbContext.cs",
+              "RelativeDocumentMoniker": "ShoopingWeb\\Data\\ShopDbContext.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Data\\ShopDbContext.cs",
+              "RelativeToolTip": "ShoopingWeb\\Data\\ShopDbContext.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAxwB0AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T09:56:44.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Program.cs",
               "RelativeDocumentMoniker": "ShoopingWeb\\Program.cs",
               "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Program.cs",
               "RelativeToolTip": "ShoopingWeb\\Program.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEwAAAAZAAAA",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAuwGcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T08:19:18.357Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\appsettings.json",
-              "RelativeDocumentMoniker": "ShoopingWeb\\appsettings.json",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\appsettings.json",
-              "RelativeToolTip": "ShoopingWeb\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-17T08:19:12.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "Role.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\Role.cs",
               "RelativeDocumentMoniker": "ShoopingWeb\\Models\\Role.cs",
               "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\Role.cs",
               "RelativeToolTip": "ShoopingWeb\\Models\\Role.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T08:18:07.806Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ShopDbContext.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Data\\ShopDbContext.cs",
-              "RelativeDocumentMoniker": "ShoopingWeb\\Data\\ShopDbContext.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Data\\ShopDbContext.cs",
-              "RelativeToolTip": "ShoopingWeb\\Data\\ShopDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T07:13:06.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "FinanceController.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Controllers\\FinanceController.cs",
               "RelativeDocumentMoniker": "ShoopingWeb\\Controllers\\FinanceController.cs",
               "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Controllers\\FinanceController.cs",
               "RelativeToolTip": "ShoopingWeb\\Controllers\\FinanceController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T07:12:26.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "PermissionsController.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Controllers\\PermissionsController.cs",
               "RelativeDocumentMoniker": "ShoopingWeb\\Controllers\\PermissionsController.cs",
               "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Controllers\\PermissionsController.cs",
               "RelativeToolTip": "ShoopingWeb\\Controllers\\PermissionsController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAMwCgAAAAdAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAMwCYAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T05:28:09.811Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "order_products.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\order_products.cs",
               "RelativeDocumentMoniker": "ShoopingWeb\\Models\\order_products.cs",
@@ -173,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "ShoopingWeb\\Controllers\\CategoryController.cs",
@@ -186,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "PurchaseOrderDto.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\DTO\\Dtos\\PurchaseOrderDto.cs",
               "RelativeDocumentMoniker": "ShoopingWeb\\DTO\\Dtos\\PurchaseOrderDto.cs",
@@ -199,13 +280,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "product_TableDto.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\DTO\\Dtos\\product_TableDto.cs",
               "RelativeDocumentMoniker": "ShoopingWeb\\DTO\\Dtos\\product_TableDto.cs",
               "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\DTO\\Dtos\\product_TableDto.cs",
               "RelativeToolTip": "ShoopingWeb\\DTO\\Dtos\\product_TableDto.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAiwA0AAAAAAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA3wA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T05:27:09.291Z",
               "EditorCaption": ""
@@ -218,14 +299,14 @@
               "RelativeDocumentMoniker": "ShoopingWeb\\Controllers\\PurchaseController.cs",
               "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Controllers\\PurchaseController.cs",
               "RelativeToolTip": "ShoopingWeb\\Controllers\\PurchaseController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAACAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAowC4AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T04:39:33.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "IPurchaseService.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Services\\Interfaces\\IPurchaseService.cs",
               "RelativeDocumentMoniker": "ShoopingWeb\\Services\\Interfaces\\IPurchaseService.cs",
@@ -238,26 +319,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PurchaseService.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Services\\Implmentation\\PurchaseService.cs",
               "RelativeDocumentMoniker": "ShoopingWeb\\Services\\Implmentation\\PurchaseService.cs",
               "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Services\\Implmentation\\PurchaseService.cs",
               "RelativeToolTip": "ShoopingWeb\\Services\\Implmentation\\PurchaseService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBcAAAANAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAhwCAAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T04:37:20.923Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 2,
               "Title": "File_ManagementController.cs",
               "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Controllers\\File_ManagementController.cs",
               "RelativeDocumentMoniker": "ShoopingWeb\\Controllers\\File_ManagementController.cs",
               "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Controllers\\File_ManagementController.cs",
               "RelativeToolTip": "ShoopingWeb\\Controllers\\File_ManagementController.cs",
-              "ViewState": "AQIAAHYAAAAAAAAAAAAuwIMAAAAJAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAmwCkAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-16T10:35:05.999Z",
               "EditorCaption": ""
@@ -280,12 +361,12 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "50e68d19-26c3-41c6-a8c4-c951f27accd1",
-        "Display": 0,
-        "X": 854,
-        "Y": 269,
-        "Width": 923,
-        "Height": 809,
+        "Id": "65efecf0-5fb6-4273-95fd-41cace23d0d5",
+        "Display": 1,
+        "X": -4,
+        "Y": 425,
+        "Width": 922,
+        "Height": 789,
         "WindowState": 0
       },
       "DocumentGroups": [
@@ -295,47 +376,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "purchase_orders.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\purchase_orders.cs",
-              "RelativeDocumentMoniker": "ShoopingWeb\\Models\\purchase_orders.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\purchase_orders.cs",
-              "RelativeToolTip": "ShoopingWeb\\Models\\purchase_orders.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAswAgAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T04:37:15.445Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "65efecf0-5fb6-4273-95fd-41cace23d0d5",
-        "Display": 0,
-        "X": -5,
-        "Y": 321,
-        "Width": 921,
-        "Height": 788,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AR_Detail.cs",
-              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\AR_Detail.cs",
-              "RelativeDocumentMoniker": "ShoopingWeb\\Models\\AR_Detail.cs",
-              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\AR_Detail.cs",
-              "RelativeToolTip": "ShoopingWeb\\Models\\AR_Detail.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAswAgAAAANAAAA",
+              "DocumentIndex": 12,
+              "Title": "AP_Detail.cs",
+              "DocumentMoniker": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\AP_Detail.cs",
+              "RelativeDocumentMoniker": "ShoopingWeb\\Models\\AP_Detail.cs",
+              "ToolTip": "D:\\01\u684C\u9762\u5FEB\u6377\u952E\\\u5B66\u6821\u6587\u4EF6\u5B58\u653E\\\u5927\u4E09\u4E0A\u5B66\u671F\\01myword\\\u4EE3\u7801\u6E90\u6587\u4EF6\\erp\u7CFB\u7EDF\\ShoopingWeb\\ShoopingWeb\\Models\\AP_Detail.cs",
+              "RelativeToolTip": "ShoopingWeb\\Models\\AP_Detail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T07:10:22.821Z",
               "EditorCaption": ""

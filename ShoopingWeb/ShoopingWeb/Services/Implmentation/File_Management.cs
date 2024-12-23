@@ -41,11 +41,7 @@ namespace ShoopingWeb.Services.Implmentation
         }
 
 
-        public async Task<IEnumerable<storehouse_Table>> GetDataByStorehouse_Table()
-{
-            return await _context.storehouse_Table
-                .ToListAsync();
-        }
+   
 
 
 
@@ -112,7 +108,6 @@ namespace ShoopingWeb.Services.Implmentation
             {
                 throw new ArgumentException("Category name is required.", nameof(name));
             }
-
 
             var category = await _context.product_Table.FindAsync(id);
             if (category == null) throw new Exception("Category not found");

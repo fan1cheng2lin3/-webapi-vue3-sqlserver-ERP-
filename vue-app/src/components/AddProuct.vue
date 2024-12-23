@@ -7,6 +7,8 @@
         <el-form-item label="商品名称" prop="name">
           <el-input v-model="ruleFroms.name" />
         </el-form-item>
+
+        
         <el-form-item label="商品编号" prop="product_code">
           <el-input v-model="ruleFroms.product_code" />
         </el-form-item>
@@ -72,32 +74,47 @@
   });
     
   // 提交修改
-  const addCategory = () => {
-      const param = {
-          name: ruleFroms.value.name,
-          product_code: ruleFroms.value.product_code, 
-          product_type: ruleFroms.value.product_type, 
-          supplier_name: ruleFroms.value.supplier_name, 
-          unit_price: ruleFroms.value.unit_price, // 新增字段
-          count: ruleFroms.value.count, 
-      };
-  
-      if (props.dialogTitle === "添加") {
-          axios.post("/File_Management/appproduct", param).then(() => {
-              ElMessage.success("添加成功");
-              state.dialogVisible = false; // 关闭窗口
-              realod(); // 刷新列表
-          });
-      } else {
-          axios.put(`/File_Management/productid/${props.tableRow.id}`, param).then(() => {
-              ElMessage.success("修改成功");
-              state.dialogVisible = false; // 关闭窗口
-              realod(); // 刷新列表
-          });
-      }
-  };
-  
-  
+// 提交修改
+const addCategory = () => {
+    // 将单个商品对象包装成数组，以满足后端的List<product_Table>期望
+    const param = reactive([
+  {
+    name: ruleFroms.value.name,
+    product_code: ruleFroms.value.product_code, 
+    product_type: ruleFroms.value.product_type, 
+    supplier_name: ruleFroms.value.supplier_name, 
+    unit_price: parseFloat(ruleFroms.value.unit_price), // 确保是数字类型
+    count: parseInt(ruleFroms.value.count), // 确保是整数类型
+  },
+]);
+const param2 = {
+
+name: ruleFroms.value.name,
+product_code: ruleFroms.value.product_code, 
+product_type: ruleFroms.value.product_type, 
+supplier_name: ruleFroms.value.supplier_name, 
+unit_price:  parseFloat(ruleFroms.value.unit_price),// 确保是数字类型
+count: parseInt(ruleFroms.value.count),  // 确保是整数类型
+};
+
+    if (props.dialogTitle === "添加") {
+        axios.post("/File_Management/appproduct", param).then(() => {
+            ElMessage.success("添加成功");
+            state.dialogVisible = false; // 关闭窗口
+            realod(); // 刷新列表
+        }).catch(error => {
+            ElMessage.error(error.response.data.errors); // 显示后端返回的错误信息
+        });
+    } else {
+        axios.put(`/File_Management/productid/${props.tableRow.id}`, param2).then(() => {
+            ElMessage.success("修改成功");
+            state.dialogVisible = false; // 关闭窗口
+            realod(); // 刷新列表
+        }).catch(error => {
+            ElMessage.error(error.response.data.errors); // 显示后端返回的错误信息
+        });
+    }
+};
 
 
 

@@ -7,7 +7,9 @@ namespace ShoopingWeb.Services.Interfaces
         Task<IEnumerable<product_Table>> GetDataByProduct_Table();
         Task<IEnumerable<Customer>> GetDataByCustomer_Table();
         Task<IEnumerable<supplier_Table>> GetDataBySupplier_Table();
-        Task<IEnumerable<storehouse_Table>> GetDataByStorehouse_Table();
+
+
+   
 
 
 

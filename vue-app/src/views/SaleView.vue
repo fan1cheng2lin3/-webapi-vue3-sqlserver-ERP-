@@ -1,16 +1,7 @@
 <script setup>
-import { reactive, ref, onMounted, watch } from 'vue';
+import { reactive, ref, onMounted } from 'vue';
 import { ElMessage } from 'element-plus';
 import axios from 'axios';
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-
-const goToWarehouse = () => {
-  router.push({ name: 'Warehou' });
-};
-
-
 
 // 自动生成订单编号
 const generateOrderId = () => {
@@ -136,9 +127,6 @@ const submitForm = async () => {
   amount: calculateAmount(productTableData), // 自动计算总价
   due_date: calculateDueDate(purchaseForm.settlementMethod, purchaseForm.purchaseDate), // 动态计算到期日期
 };
-
-
-
       try {
         await axios.post('/Purchase/Addpurchase',payload );
         ElMessage.success('添加成功');
@@ -146,16 +134,15 @@ const submitForm = async () => {
 
       //提交应收
          try {
-            await axios.post('/Finance/AP_Detail', yingshou );
+            await axios.post('/Finance/AR_Detail', yingshou );
         } catch (error) {
-            console.log("应付明细错误")
+            console.log("应收明细错误")
         }
 
       } catch (error) {
         const message = error.response?.data?.message || '网络或服务端错误';
         ElMessage.error(`添加失败：${message}`);
       }
-
 
     } else {
       ElMessage.warning('请完成所有必填字段');
@@ -174,132 +161,72 @@ const resetForm = () => {
 };
 
 
-// 产品列表，用于后端查询
-const productList = ref([]);
-
-// 查询商品信息
-const getProductList = async () => {
-  try {
-    const response = await axios.get('/File_Management/product');
-    productList.value = response.data;  // 将商品数据存储在响应式列表中
-  } catch (error) {
-    ElMessage.error("无法加载商品数据");
-  }
-};
-
-// 自动填充商品信息
-const autoFillProduct = (index, productCodeOrName) => {
-  const product = productList.value.find(
-    (p) => p.product_code === productCodeOrName || p.name === productCodeOrName
-  );
-  if (product) {
-    // 找到匹配的产品，填充信息
-    productTableData[index].productCode = product.product_code;
-    productTableData[index].name = product.name;
-    productTableData[index].productType = product.product_type;
-    productTableData[index].unitPrice = product.unit_price;
-  } else {
-    ElMessage.warning('未找到匹配的产品');
-  }
-};
-
-// 监听产品编码或产品名称的变化
-watch(
-  () => productTableData,
-  (newData) => {
-    newData.forEach((row, index) => {
-      if (row.productCode || row.name) {
-        autoFillProduct(index, row.productCode || row.name);
-      }
-    });
-  },
-  { deep: true }
-);
-
-
 // 初始化订单编号
 onMounted(() => {
   purchaseForm.orderId = generateOrderId();
-  getProductList();
 });
 </script>
 
 <template>
-  <h1>采购单</h1>
-  
-  <!-- 提交按钮 -->
-  <el-form-item>
-    <el-button type="primary" @click="submitForm">提交</el-button>
-    <el-button @click="resetForm">重置</el-button>
-    <el-button @click="goToWarehouse">到货</el-button>
-  </el-form-item>
-  
+    <h1>销售表</h1>
+   <!-- 提交按钮 -->
+   <el-form-item>
+      <el-button type="primary" @click="submitForm">审核</el-button>
+      <el-button @click="resetForm">重置</el-button>
+      <el-button @click="resetForm">发货通知</el-button>
+    </el-form-item>
   <el-form ref="purchaseFormRef" :model="purchaseForm" :rules="rules" label-width="120px">
     <!-- 采购订单信息 -->
-    <el-form-item label="订单编号">
+    <el-form-item label="销售编号">
       <el-input v-model="purchaseForm.orderId" disabled></el-input>
     </el-form-item>
-    <el-form-item label="采购日期" prop="purchaseDate">
-      <el-date-picker v-model="purchaseForm.purchaseDate" type="date"></el-date-picker>
+    <el-form-item label="联系人">
+      <el-input v-model="purchaseForm.orderId" disabled></el-input>
     </el-form-item>
-    <el-form-item label="工作人员" prop="staff">
-      <el-select v-model="purchaseForm.staff" placeholder="请选择工作人员">
-        <el-option v-for="supplier in StaffList" :key="supplier.id" :label="supplier.name" :value="supplier.id" />
-      </el-select>
+    <el-form-item label="联系电话">
+      <el-input v-model="purchaseForm.orderId" disabled></el-input>
     </el-form-item>
 
-    <el-form-item label="支付方式" prop="paymentMethod">
-      <el-select v-model="purchaseForm.paymentMethod">
-        <el-option label="支付宝" value="支付宝"></el-option>
-        <el-option label="微信" value="微信"></el-option>
-        <el-option label="银行卡" value="银行卡"></el-option>
-        <el-option label="货到付款" value="货到付款"></el-option>
-      </el-select>
+    <el-form-item label="下单日期" prop="purchaseDate">
+      <el-date-picker v-model="purchaseForm.purchaseDate" type="date"></el-date-picker>
     </el-form-item>
-    <el-form-item label="结算方式" prop="settlementMethod">
-      <el-select v-model="purchaseForm.settlementMethod">
-        <el-option label="月结" value="月结"></el-option>
-        <el-option label="季结" value="季结"></el-option>
-        <el-option label="货到付款" value="货到付款"></el-option>
-      </el-select>
-    </el-form-item>
-    <el-form-item label="币种" prop="currency">
-      <el-select v-model="purchaseForm.currency">
-        <el-option label="人民币" value="人民币"></el-option>
-        <el-option label="美元" value="美元"></el-option>
-      </el-select>
-    </el-form-item>
-    <el-form-item label="供应商" prop="supplierDeliveryMethodId">
+
+    <el-form-item label="单位名称" prop="supplierDeliveryMethodId">
       <el-select v-model="purchaseForm.supplierDeliveryMethodId" placeholder="请选择供应商">
         <el-option v-for="supplier in supplierList" :key="supplier.id" :label="supplier.name" :value="supplier.id" />
       </el-select>
     </el-form-item>
+    <el-form-item label="单位地址" prop="staff">
+      <el-select v-model="purchaseForm.staff" placeholder="请选择工作人员">
+        <el-option v-for="supplier in StaffList" :key="supplier.id" :label="supplier.name" :value="supplier.id" />
+      </el-select>
+      
+    </el-form-item>
+ 
 
     <!-- 产品信息列表 -->
+    
     <el-table :data="productTableData" style="width: 100%" border>
       <el-table-column label="产品编码">
         <template #default="scope">
-          <el-input v-model="scope.row.productCode" placeholder="输入产品编码" />
+          <el-input v-model="scope.row.productCode" placeholder="输入产品编码"></el-input>
         </template>
       </el-table-column>
       <el-table-column label="产品名称">
         <template #default="scope">
-          <el-input v-model="scope.row.name" placeholder="输入产品名称" />
+          <el-input v-model="scope.row.name" placeholder="输入产品名称"></el-input>
         </template>
       </el-table-column>
-      <el-table-column label="产品类型">
-        <template #default="scope">
-          <el-input v-model="scope.row.productType" placeholder="输入产品类型" disabled />
-        </template>
-      </el-table-column>
+     
+      
       <el-table-column label="单价">
         <template #default="scope">
-          <el-input-number v-model="scope.row.unitPrice" :min="0" disabled />
+          <el-input-number v-model="scope.row.unitPrice" :min="0"></el-input-number>
         </template>
       </el-table-column>
       <el-table-column label="数量">
         <template #default="scope">
-          <el-input-number v-model="scope.row.count" :min="0" />
+          <el-input-number v-model="scope.row.count" :min="0"></el-input-number>
         </template>
       </el-table-column>
       <el-table-column label="操作">
@@ -309,5 +236,7 @@ onMounted(() => {
       </el-table-column>
     </el-table>
     <el-button type="primary" @click="addNewProduct">新增产品</el-button>
+
+   
   </el-form>
 </template>

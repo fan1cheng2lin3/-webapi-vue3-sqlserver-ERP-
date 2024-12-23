@@ -61,7 +61,6 @@ builder.Services.AddSwaggerGen(c =>
 );
 
 
-
 builder.Services.AddDbContext<ShopDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("ShopConn"));

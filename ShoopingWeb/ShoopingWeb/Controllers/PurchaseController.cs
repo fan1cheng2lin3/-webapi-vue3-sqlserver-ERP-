@@ -64,6 +64,53 @@ namespace ShoopingWeb.Controllers
         }
 
 
+        [HttpPut("Updatepurchase/{orderId}")]
+        public async Task<IActionResult> Updatepurchase(int orderId, [FromBody] PurchaseOrderDto dto)
+        {
+            // 1. 查找并更新主表 purchase_orders 数据
+            var mainOrder = await _context.purchase_orders.FindAsync(orderId);
+            if (mainOrder == null)
+            {
+                return NotFound("订单未找到");
+            }
+
+            // 更新主订单信息
+            mainOrder.purchase_date = dto.PurchaseDate;
+            mainOrder.staff = dto.Staff;
+            mainOrder.payment_method = dto.PaymentMethod;
+            mainOrder.settlement_method = dto.SettlementMethod;
+            mainOrder.currency = dto.Currency;
+            mainOrder.supplier_delivery_method_id = dto.SupplierDeliveryMethodId;
+
+            // 更新主表数据
+            _context.purchase_orders.Update(mainOrder);
+
+            // 2. 更新 order_products 数据
+            // 删除原有的产品信息
+            var existingProducts = _context.order_products.Where(p => p.order_id == orderId).ToList();
+            _context.order_products.RemoveRange(existingProducts);
+
+            // 插入更新后的产品信息
+            foreach (var product in dto.Products)
+            {
+                var orderProduct = new order_products
+                {
+                    order_id = orderId,
+                    Name = product.Name,
+                    Product_code = product.ProductCode,
+                    Product_type = product.ProductType,
+                    supplier_name = product.SupplierName,
+                    count = product.Count,
+                    unit_price = product.UnitPrice
+                };
+                await _context.order_products.AddAsync(orderProduct);
+            }
+
+            await _context.SaveChangesAsync();
+            return Ok("订单更新成功");
+        }
+
+
 
 
 

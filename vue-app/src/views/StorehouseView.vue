@@ -1,260 +1,199 @@
 <script setup>
-import { reactive, ref, onMounted } from 'vue';
-import { ElMessage } from 'element-plus';
+import { ref, onMounted } from 'vue';
 import axios from 'axios';
+import * as echarts from 'echarts';
 
-// 自动生成订单编号
-const generateOrderId = () => {
-  const now = new Date();
-  return (
-    now.getMinutes().toString().padStart(2, '0') +
-    now.getSeconds().toString().padStart(2, '0') +
-    now.getMilliseconds().toString().padStart(3, '0')
-  );
-};
+// 数据存储
+const storehouseData = ref([]);
 
-// 表单数据：采购订单信息
-const purchaseForm = reactive({
-  orderId: '', // 自动生成的订单编号
-  purchaseDate: '',
-  staff: '',
-  paymentMethod: '微信',
-  settlementMethod: '月结',
-  currency: '人民币',
-  supplierDeliveryMethodId: '',
-});
-
-
-
-// 初始化产品信息
-const initProduct = () => ({
-  name: '',
-  productCode: '',
-  productType: '',
-  supplierName: '',
-  unitPrice: 0,
-  count: 0,
-});
-
-const productTableData = reactive([initProduct()]);
-
-const supplierList = reactive([
-  { id: 1, name: '供应商1' },
-  { id: 2, name: '供应商2' },
-  // 更多供应商
-]);
-
-
-const StaffList = reactive([
-  { id: 1, name: '小王' },
-  { id: 2, name: '小李' },
-  // 更多供应商
-]);
-
-// 表单引用
-const purchaseFormRef = ref(null);
-
-// 校验规则
-const rules = reactive({
-  purchaseDate: [{ required: true, message: '采购日期不能为空', trigger: 'change' }],
-  staff: [{ required: true, message: '工作人员不能为空', trigger: 'blur' }],
-  paymentMethod: [{ required: true, message: '支付方式不能为空', trigger: 'blur' }],
-  settlementMethod: [{ required: true, message: '结算方式不能为空', trigger: 'blur' }],
-  currency: [{ required: true, message: '币种不能为空', trigger: 'change' }],
-  supplierDeliveryMethodId: [{ required: true, message: '供应商不能为空', trigger: 'blur' }],
-});
-
-// 添加新产品行
-const addNewProduct = () => {
-  productTableData.push(initProduct());
-};
-
-// 删除产品行
-const deleteProduct = (index) => {
-  productTableData.splice(index, 1);
-};
-
-
-const yingshouForm = reactive({
-  detail_id: 1, // 自动生成的订单编号
-  receivables: '',
-  invoice_number: '',
-  amount: 9,
-  due_date: '',
-  created_at: '',
-});
-
-const calculateAmount = (products) => {
-  return products.reduce((total, product) => {
-    return total + (product.unitPrice * product.count);
-  }, 0);
-};
-
-const calculateDueDate = (settlementMethod, purchaseDate) => {
-  const purchaseDateObj = new Date(purchaseDate);
-
-  if (settlementMethod === '月结') {
-    purchaseDateObj.setMonth(purchaseDateObj.getMonth() + 1); // 月结：加一个月
-  } else if (settlementMethod === '季结') {
-    purchaseDateObj.setMonth(purchaseDateObj.getMonth() + 3); // 季结：加三个月
-  } else if (settlementMethod === '货到付款') {
-    return purchaseDateObj.toISOString(); // 货到付款使用采购日期
+// 获取后端数据
+const fetchStorehouseData = async () => {
+  try {
+    const response = await axios.get('/File_Management/storehouse');
+    storehouseData.value = response.data;
+    renderCharts();
+  } catch (error) {
+    console.error("获取仓库数据失败", error);
   }
-
-  return purchaseDateObj.toISOString(); // 默认返回修改后的到期日期
 };
 
-// 提交表单
-const submitForm = async () => {
-  purchaseFormRef.value.validate(async (valid) => {
-    if (valid) {
-      // 构建 payload
-      const payload = {
-        ...purchaseForm,
-        purchaseDate: purchaseForm.purchaseDate ? new Date(purchaseForm.purchaseDate).toISOString() : '',
-        products: productTableData.map((product) => ({
-        name: product.name,
-        productCode: product.productCode,
-        productType: product.productType,
-        supplierName: product.supplierName,
-        unitPrice: parseFloat(product.unitPrice), // 确保单价是浮点数
-        count: parseInt(product.count, 10), // 确保数量是整数
-        })),
-      };
-      const yingshou = {
-  ...yingshouForm,
-  receivables: supplierList.find(supplier => supplier.id === purchaseForm.supplierDeliveryMethodId)?.name || "默认供应商", // 动态替换为供应商名称
-  amount: calculateAmount(productTableData), // 自动计算总价
-  due_date: calculateDueDate(purchaseForm.settlementMethod, purchaseForm.purchaseDate), // 动态计算到期日期
+// 绘制所有图表
+const renderCharts = () => {
+  // 1. 库存量统计图
+  const inventoryChart = echarts.init(document.getElementById('inventory-chart'));
+  const inventoryOption = {
+    title: {
+      text: '每个仓库的库存量',
+      subtext: '单位：件',
+    },
+    tooltip: {
+      trigger: 'axis',
+    },
+    xAxis: {
+      type: 'category',
+      data: getWarehouseNames(),
+    },
+    yAxis: {
+      type: 'value',
+    },
+    series: [
+      {
+        name: '库存量',
+        type: 'bar',
+        data: getWarehouseStockCounts(),
+      },
+    ],
+  };
+  inventoryChart.setOption(inventoryOption);
+
+  // 2. 库存价值图（堆积柱状图）
+  const valueChart = echarts.init(document.getElementById('value-chart'));
+  const valueOption = {
+    title: {
+      text: '每个仓库的库存价值',
+      subtext: '单位：元',
+    },
+    tooltip: {
+      trigger: 'axis',
+    },
+    legend: {
+      data: getProductTypes(),
+    },
+    xAxis: {
+      type: 'category',
+      data: getWarehouseNames(),
+    },
+    yAxis: {
+      type: 'value',
+    },
+    series: getInventoryValueSeries(),
+  };
+  valueChart.setOption(valueOption);
+
+  // 3. 库存分布图（饼图）
+  const distributionChart = echarts.init(document.getElementById('distribution-chart'));
+  const distributionOption = {
+    title: {
+      text: '库存产品类型分布',
+      subtext: '单位：件',
+    },
+    tooltip: {
+      trigger: 'item',
+      formatter: '{b}: {c} ({d}%)',
+    },
+    series: [
+      {
+        name: '产品类型分布',
+        type: 'pie',
+        radius: '55%',
+        center: ['50%', '50%'],
+        data: getProductTypeDistribution(),
+      },
+    ],
+  };
+  distributionChart.setOption(distributionOption);
 };
 
+// 获取所有仓库的名称
+const getWarehouseNames = () => {
+  return Array.from(new Set(storehouseData.value.map(item => item.name)));
+};
 
-
-      try {
-        await axios.post('/Purchase/Addpurchase',payload );
-        ElMessage.success('添加成功');
-        resetForm();
-
-      //提交应收
-         try {
-            await axios.post('/Finance/AR_Detail', yingshou );
-        } catch (error) {
-            console.log("应收明细错误")
-        }
-
-      } catch (error) {
-        const message = error.response?.data?.message || '网络或服务端错误';
-        ElMessage.error(`添加失败：${message}`);
-      }
-
-
-
-
-
-    } else {
-      ElMessage.warning('请完成所有必填字段');
-    }
+// 获取每个仓库的库存量
+const getWarehouseStockCounts = () => {
+  return getWarehouseNames().map(warehouse => {
+    return storehouseData.value
+      .filter(item => item.name === warehouse)
+      .reduce((total, item) => total + item.count, 0);
   });
 };
 
-// 重置表单
-const resetForm = () => {
-  if (purchaseFormRef.value) {
-    purchaseFormRef.value.resetFields();
-  }
-  purchaseForm.orderId = generateOrderId(); // 调用 generateOrderId() 来生成新的订单编号
-  productTableData.splice(0);
-  addNewProduct(); // 添加初始产品行
+// 获取所有的产品类型
+const getProductTypes = () => {
+  return Array.from(new Set(storehouseData.value.map(item => item.product_type)));
 };
 
+// 获取每个产品类型在各仓库的库存价值（堆积柱状图）
+const getInventoryValueSeries = () => {
+  const productTypes = getProductTypes();
+  return productTypes.map(type => {
+    return {
+      name: type,
+      type: 'bar',
+      stack: '库存价值',
+      data: getWarehouseNames().map(warehouse => {
+        return storehouseData.value
+          .filter(item => item.name === warehouse && item.product_type === type)
+          .reduce((total, item) => total + (item.count * item.unit_price), 0);
+      }),
+    };
+  });
+};
 
-// 初始化订单编号
+// 获取每个产品类型在库存中的占比
+const getProductTypeDistribution = () => {
+  const productTypeCounts = storehouseData.value.reduce((acc, item) => {
+    if (acc[item.product_type]) {
+      acc[item.product_type] += item.count;
+    } else {
+      acc[item.product_type] = item.count;
+    }
+    return acc;
+  }, {});
+  return Object.entries(productTypeCounts).map(([type, count]) => ({
+    name: type,
+    value: count,
+  }));
+};
+
+// 在组件加载时获取数据
 onMounted(() => {
-  purchaseForm.orderId = generateOrderId();
+  fetchStorehouseData();
 });
 </script>
 
 <template>
-   <!-- 提交按钮 -->
-   <el-form-item>
-      <el-button type="primary" @click="submitForm">提交</el-button>
-      <el-button @click="resetForm">重置</el-button>
-    </el-form-item>
-  <el-form ref="purchaseFormRef" :model="purchaseForm" :rules="rules" label-width="120px">
-    <!-- 采购订单信息 -->
-    <el-form-item label="订单编号">
-      <el-input v-model="purchaseForm.orderId" disabled></el-input>
-    </el-form-item>
-    <el-form-item label="采购日期" prop="purchaseDate">
-      <el-date-picker v-model="purchaseForm.purchaseDate" type="date"></el-date-picker>
-    </el-form-item>
-    <el-form-item label="工作人员" prop="staff">
-      <el-select v-model="purchaseForm.staff" placeholder="请选择工作人员">
-        <el-option v-for="supplier in StaffList" :key="supplier.id" :label="supplier.name" :value="supplier.id" />
-      </el-select>
-    </el-form-item>
-    <el-form-item label="支付方式" prop="paymentMethod">
-      <el-select v-model="purchaseForm.paymentMethod">
-        <el-option label="支付宝" value="支付宝"></el-option>
-        <el-option label="微信" value="微信"></el-option>
-        <el-option label="银行卡" value="银行卡"></el-option>
-        <el-option label="货到付款" value="货到付款"></el-option>
-      </el-select>
-    </el-form-item>
-    <el-form-item label="结算方式" prop="settlementMethod">
-      <el-select v-model="purchaseForm.settlementMethod">
-        <el-option label="月结" value="月结"></el-option>
-        <el-option label="季结" value="季结"></el-option>
-        <el-option label="货到付款" value="货到付款"></el-option>
-      </el-select>
-    </el-form-item>
-    <el-form-item label="币种" prop="currency">
-      <el-select v-model="purchaseForm.currency">
-        <el-option label="人民币" value="人民币"></el-option>
-        <el-option label="美元" value="美元"></el-option>
-      </el-select>
-    </el-form-item>
-    <el-form-item label="供应商" prop="supplierDeliveryMethodId">
-      <el-select v-model="purchaseForm.supplierDeliveryMethodId" placeholder="请选择供应商">
-        <el-option v-for="supplier in supplierList" :key="supplier.id" :label="supplier.name" :value="supplier.id" />
-      </el-select>
-    </el-form-item>
+  <h1>仓库统计图</h1>
+  <div class="chart-container">
+    <!-- 库存量统计图 -->
+    <div id="inventory-chart" class="chart-item"></div>
 
-    <!-- 产品信息列表 -->
-    <el-table :data="productTableData" style="width: 100%" border>
-      <el-table-column label="产品名称">
-        <template #default="scope">
-          <el-input v-model="scope.row.name" placeholder="输入产品名称"></el-input>
-        </template>
-      </el-table-column>
-      <el-table-column label="产品编码">
-        <template #default="scope">
-          <el-input v-model="scope.row.productCode" placeholder="输入产品编码"></el-input>
-        </template>
-      </el-table-column>
-      <el-table-column label="产品类型">
-        <template #default="scope">
-          <el-input v-model="scope.row.productType" placeholder="输入产品类型"></el-input>
-        </template>
-      </el-table-column>
-      <el-table-column label="单价">
-        <template #default="scope">
-          <el-input-number v-model="scope.row.unitPrice" :min="0"></el-input-number>
-        </template>
-      </el-table-column>
-      <el-table-column label="数量">
-        <template #default="scope">
-          <el-input-number v-model="scope.row.count" :min="0"></el-input-number>
-        </template>
-      </el-table-column>
-      <el-table-column label="操作">
-        <template #default="scope">
-          <el-button @click="deleteProduct(scope.$index)" type="danger">删除</el-button>
-        </template>
-      </el-table-column>
-    </el-table>
-    <el-button type="primary" @click="addNewProduct">新增产品</el-button>
+    <!-- 库存价值图 -->
+    <div id="value-chart" class="chart-item"></div>
 
-   
-  </el-form>
+    <!-- 库存分布图 -->
+    <div id="distribution-chart" class="chart-item"></div>
+  </div>
+
+  <el-table :data="storehouseData" style="width: 100%" border>
+    <el-table-column label="仓库名称" prop="name" width="180"></el-table-column>
+    <el-table-column label="产品编码" prop="product_code" width="180"></el-table-column>
+    <el-table-column label="产品名称" prop="storehouse_address" width="180"></el-table-column>
+    <el-table-column label="产品类型" prop="product_type" width="180"></el-table-column>
+    <el-table-column label="单价" prop="unit_price" width="100"></el-table-column>
+    <el-table-column label="数量" prop="count" width="100"></el-table-column>
+    <el-table-column label="库存价值" width="100">
+      <template #default="scope">
+        <span>{{ scope.row.unit_price * scope.row.count }}</span>
+      </template>
+    </el-table-column>
+  </el-table>
 </template>
+
+<style scoped>
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.chart-item {
+  width: 32%;
+  height: 400px;
+  margin: 10px 0;
+}
+
+.el-table {
+  margin-top: 40px;
+}
+</style>
