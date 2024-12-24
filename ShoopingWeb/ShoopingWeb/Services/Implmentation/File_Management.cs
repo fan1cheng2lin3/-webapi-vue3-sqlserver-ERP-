@@ -94,7 +94,25 @@ namespace ShoopingWeb.Services.Implmentation
                 Product_code = Product_code,
                 Product_type = Product_type,
                 Unit_price = Unit_price,
-                Count = Count
+                Count = Count,
+                  operation_type = "入库"
+
+            };
+            await _context.storehouse_Table.AddAsync(categoryData);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task AddOStorehouse_Table(string Name, string storehouse_address, string Product_code, string Product_type, int Unit_price, int Count)
+        {
+            var categoryData = new storehouse_Table
+            {
+                Name = Name,
+                storehouse_address = storehouse_address,
+                Product_code = Product_code,
+                Product_type = Product_type,
+                Unit_price = Unit_price,
+                Count = Count,
+                operation_type = "出库"
 
             };
             await _context.storehouse_Table.AddAsync(categoryData);

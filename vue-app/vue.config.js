@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = defineConfig({
   transpileDependencies: true,
   devServer: {
-    port: 8814, // 更改为8081端口
+    port: 6989, // 更改为8081端口
     proxy: {
       "/api": {
         target: "https://localhost:7074/api", // 服务器请求的地址

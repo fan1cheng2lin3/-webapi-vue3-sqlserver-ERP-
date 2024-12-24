@@ -11,6 +11,7 @@ namespace ShoopingWeb.Models
 
         public string? Product_code { get; set; } // 字段值
         public string? Product_type { get; set; } // 字段值
+        public string? operation_type { get; set; } // 字段值
         public int? Unit_price { get; set; } // 字段值
         public int? Count { get; set; } // 字段值
 

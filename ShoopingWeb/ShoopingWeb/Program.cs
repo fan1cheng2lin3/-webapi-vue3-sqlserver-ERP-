@@ -91,6 +91,7 @@ builder.Services.AddScoped<ICategoryDataService, CategoryDataService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IFile_Management, File_Management>();
 builder.Services.AddScoped<IPurchaseService, PurchaseService>();
+builder.Services.AddScoped<ISaleServer, SaleServer>();
 
 
 var app = builder.Build();

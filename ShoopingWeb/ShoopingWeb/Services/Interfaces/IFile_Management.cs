@@ -23,10 +23,12 @@ namespace ShoopingWeb.Services.Interfaces
 
         Task AddCustomer_Table(string Name, string Phone, string Address);
         Task AddSupplier_Table(string Name, string Supplier_phone, string Supplier_address);
+
+
         Task AddStorehouse_Table(string Name, string Product_code, string storehouse_address, string Product_type, int Unit_price, int Count);
 
 
-
+        Task AddOStorehouse_Table(string Name, string storehouse_address, string Product_code, string Product_type,int Unit_price, int Count);
 
 
         Task UpdateCustomer(int id, string name, string Phone, string Address);

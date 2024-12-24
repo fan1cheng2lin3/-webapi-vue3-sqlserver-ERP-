@@ -34,21 +34,20 @@ namespace ShoopingWeb.Data
 
 
         /// <summary>
-        /// 应收明细表
+        /// 应付明细表
         /// </summary>
         public DbSet<AP_Detail> AP_Detail { get; set; }
 
         /// <summary>
-        /// 应付明细表
+        /// 应收明细表
         /// </summary>
-        //public DbSet<AP_Detail> AP_Detail { get; set; }
+        public DbSet<AR_Detail> AR_Detail { get; set; }
 
 
+        ///销售表
+        public DbSet<sales_orders> sales_orders { get; set; }
 
-
-
-
-        
+        public DbSet<order_sales_Table> order_sales_Table { get; set; }
 
 
 
@@ -78,6 +77,7 @@ namespace ShoopingWeb.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             base.OnModelCreating(modelBuilder);
 
             // 配置角色与权限的多对多关系

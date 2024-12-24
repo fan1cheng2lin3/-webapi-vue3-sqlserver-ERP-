@@ -1,7 +1,7 @@
 <template>
     <el-dialog v-model="dialogVisible" :title="dialogTitle" width="35%" :before-close="handleClose">
       <el-form :model="ruleFroms" label-width="auto" style="max-width: 600px">
-        <el-form-item label="档案名称" prop="name">
+        <el-form-item label="名称" prop="name">
           <el-input v-model="ruleFroms.name" />
         </el-form-item>
         <el-form-item label="电话" prop="phone">

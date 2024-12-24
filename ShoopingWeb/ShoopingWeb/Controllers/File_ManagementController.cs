@@ -23,7 +23,6 @@ namespace ShoopingWeb.Controllers
             _context = context;
         }
 
-
         // 修改
         [HttpPut("customer/{id}")]
         public async Task<IActionResult> UpdateCustomer(int id, [FromBody] CustomerDto dto)
@@ -32,9 +31,6 @@ namespace ShoopingWeb.Controllers
             return NoContent();
         }
 
-
-
-
         // 修改
         [HttpPut("productid/{id}")]
         public async Task<IActionResult> UpdateProduct(int id,[FromBody] product_TableDto dto)
@@ -42,8 +38,6 @@ namespace ShoopingWeb.Controllers
             await _service.Updateproduct_Table(id, dto.Name, dto.Product_code, dto.Product_type, dto.supplier_name, Convert.ToInt32( dto.Unit_price), Convert.ToInt32(dto.Count));
             return NoContent();
         }
-
-
 
 
         // 修改
@@ -56,7 +50,6 @@ namespace ShoopingWeb.Controllers
 
 
 
-
         // 修改
         [HttpPut("storehouseid/{id}")]
         public async Task<IActionResult> UpdateStorehouse(int id, [FromBody] storehouse_Table dto)
@@ -64,9 +57,6 @@ namespace ShoopingWeb.Controllers
             await _service.Updatestorehouse_Table(id, dto.Name, dto.storehouse_address, dto.Product_code, dto.Product_type, Convert.ToInt32(dto.Unit_price), Convert.ToInt32(dto.Count));
             return NoContent();
         }
-
-
-
 
 
         // 查询商品数据
@@ -85,6 +75,25 @@ namespace ShoopingWeb.Controllers
                 .ToListAsync();
             return Ok(data);
         }
+
+        [HttpGet("sales_orders")]
+        public async Task<IActionResult> Getsales_orders()
+        {
+            var data = await _context.sales_orders
+                .ToListAsync();
+            return Ok(data);
+        }
+
+
+        // 查询商品数据
+        [HttpGet("order_sales_Table")]
+        public async Task<IActionResult> Getorder_sales_Table()
+        {
+            var data = await _context.order_sales_Table
+                .ToListAsync();
+            return Ok(data);
+        }
+
 
         // 查询商品数据
         [HttpGet("product")]
@@ -112,15 +121,44 @@ namespace ShoopingWeb.Controllers
             return Ok(data);
         }
 
-        // 查询商品数据
+        //查询商品数据
+        //[HttpGet("storehouse")]
+        //public async Task<IActionResult> GetDataStorehouse_Table()
+        //{
+        //    var data = await _context.storehouse_Table
+        //        .Where(s => s.operation_type == "入库")
+        //        .ToListAsync();
+
+        //    return Ok(data);
+        //}
+
+
         [HttpGet("storehouse")]
         public async Task<IActionResult> GetDataStorehouse_Table()
         {
+            // 获取所有操作类型为 "入库" 和 "出库" 的记录
             var data = await _context.storehouse_Table
+                .Where(s => s.operation_type == "入库" || s.operation_type == "出库")
                 .ToListAsync();
-            return Ok(data);
-        }
 
+            // 对数据按商品编号和商品名称进行分组，计算每个商品的剩余数量
+            var groupedData = data
+                .GroupBy(s => new { s.Product_code, s.Name, s.Product_type, s.Unit_price })
+                .Select(g => new
+                {
+                    ProductCode = g.Key.Product_code,         // 商品编码
+                    Name = g.Key.Name,                        // 商品名称
+                    Product_type = g.Key.Product_type,        // 商品类型
+                    Unit_price = g.Key.Unit_price,            // 单价
+                                                              // 计算剩余库存量：入库数量 - 出库数量
+                    RemainingCount = g.Where(s => s.operation_type == "入库").Sum(s => s.Count)
+                                     - g.Where(s => s.operation_type == "出库").Sum(s => s.Count)
+                })
+                .ToList();
+
+            // 返回计算后的数据
+            return Ok(groupedData);
+        }
 
 
 
@@ -148,8 +186,6 @@ namespace ShoopingWeb.Controllers
             return Ok("批量添加成功！");
         }
 
-
-
         // 新增分类数据
         [HttpPost("appCustomer_Table")]
         public async Task<IActionResult> AddCustomer_Table([FromBody] Customer dto)
@@ -169,7 +205,7 @@ namespace ShoopingWeb.Controllers
 
         // 新增多个分类数据
         [HttpPost("appStorehouse_Table")]
-        public async Task<IActionResult> AddStorehouse_Table([FromBody] StorehouseTableRequest dto)
+        public async Task<IActionResult> AddStorehouse_Table([FromBody] OStorehouseTableRequest dto)
         {
             // 遍历所有的storehouse数据，逐个插入
             foreach (var item in dto.Storehouses)
@@ -186,6 +222,24 @@ namespace ShoopingWeb.Controllers
             return Ok();
         }
 
+
+        [HttpPost("appOStorehouse_Table")]
+        public async Task<IActionResult> AddOStorehouse_Table([FromBody] OStorehouseTableRequest dto)
+        {
+            // 遍历所有的storehouse数据，逐个插入
+            foreach (var item in dto.Storehouses)
+            {
+                await _service.AddOStorehouse_Table(
+                    dto.Name,
+                    item.StorehouseAddress,
+                    item.ProductCode,
+                    item.ProductType,
+                    Convert.ToInt32(item.UnitPrice),
+                    Convert.ToInt32(item.Count)
+                );
+            }
+            return Ok();
+        }
 
 
 

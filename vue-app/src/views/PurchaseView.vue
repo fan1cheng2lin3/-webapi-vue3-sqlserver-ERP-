@@ -47,16 +47,18 @@ const initProduct = () => ({
 
 const productTableData = reactive([initProduct()]);
 
-const supplierList = reactive([
-  { id: 1, name: '供应商1' },
-  { id: 2, name: '供应商2' },
-  // 更多供应商
-]);
+// const supplierList = reactive([
+//   { id: 1, name: '供应商1' },
+//   { id: 2, name: '供应商2' },
+//   // 更多供应商
+// ]);
+
+
 
 
 const StaffList = reactive([
-  { id: 1, name: '小王' },
-  { id: 2, name: '小李' },
+  { id: 1, name: '采购小明' },
+  { id: 2, name: '采购小红' },
   // 更多供应商
 ]);
 
@@ -216,11 +218,29 @@ watch(
   { deep: true }
 );
 
+// 定义供应商列表
+const supplierList = reactive([
+  // 初始为空或填充默认数据，后续会通过 API 替换
+]);
+
+// 获取供应商数据
+const fetchSuppliers = async () => {
+  try {
+    const response = await axios.get('/File_Management/supplier'); // 调用接口
+    supplierList.length = 0; // 清空当前数据
+    supplierList.push(...response.data); // 用获取的数据填充 supplierList
+  } catch (error) {
+    console.error('获取供应商数据失败', error);
+  }
+};
+
 
 // 初始化订单编号
 onMounted(() => {
   purchaseForm.orderId = generateOrderId();
   getProductList();
+  fetchSuppliers();
+
 });
 </script>
 

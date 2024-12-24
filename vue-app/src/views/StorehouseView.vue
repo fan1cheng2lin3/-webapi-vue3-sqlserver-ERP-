@@ -104,7 +104,7 @@ const getWarehouseStockCounts = () => {
   return getWarehouseNames().map(warehouse => {
     return storehouseData.value
       .filter(item => item.name === warehouse)
-      .reduce((total, item) => total + item.count, 0);
+      .reduce((total, item) => total + item.remainingCount, 0);
   });
 };
 
@@ -124,7 +124,7 @@ const getInventoryValueSeries = () => {
       data: getWarehouseNames().map(warehouse => {
         return storehouseData.value
           .filter(item => item.name === warehouse && item.product_type === type)
-          .reduce((total, item) => total + (item.count * item.unit_price), 0);
+          .reduce((total, item) => total + (item.remainingCount * item.unit_price), 0);
       }),
     };
   });
@@ -134,9 +134,9 @@ const getInventoryValueSeries = () => {
 const getProductTypeDistribution = () => {
   const productTypeCounts = storehouseData.value.reduce((acc, item) => {
     if (acc[item.product_type]) {
-      acc[item.product_type] += item.count;
+      acc[item.product_type] += item.remainingCount;
     } else {
-      acc[item.product_type] = item.count;
+      acc[item.product_type] = item.remainingCount;
     }
     return acc;
   }, {});
@@ -167,14 +167,14 @@ onMounted(() => {
 
   <el-table :data="storehouseData" style="width: 100%" border>
     <el-table-column label="仓库名称" prop="name" width="180"></el-table-column>
-    <el-table-column label="产品编码" prop="product_code" width="180"></el-table-column>
-    <el-table-column label="产品名称" prop="storehouse_address" width="180"></el-table-column>
+    <el-table-column label="产品编码" prop="productCode" width="180"></el-table-column>
+    <el-table-column label="产品名称" prop="product_type" width="180"></el-table-column>
     <el-table-column label="产品类型" prop="product_type" width="180"></el-table-column>
     <el-table-column label="单价" prop="unit_price" width="100"></el-table-column>
-    <el-table-column label="数量" prop="count" width="100"></el-table-column>
+    <el-table-column label="数量" prop="remainingCount" width="100"></el-table-column>
     <el-table-column label="库存价值" width="100">
       <template #default="scope">
-        <span>{{ scope.row.unit_price * scope.row.count }}</span>
+        <span>{{ scope.row.unit_price * scope.row.remainingCount }}</span>
       </template>
     </el-table-column>
   </el-table>
